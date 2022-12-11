@@ -18,7 +18,7 @@ public class PrairieInteraction {
 	public static final int RAYON = 2;
 
 	public static void main(String[] args) {
-		// TODO À compléter
+		
 	}
 
 }

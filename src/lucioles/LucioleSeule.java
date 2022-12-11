@@ -27,12 +27,11 @@ public class LucioleSeule {
 			niveauEnergie = 0.0;
 			return niveauEnergie;
 		}
-		niveauEnergie = niveauEnergie + deltaEnergie;
+		niveauEnergie += deltaEnergie;
 		return niveauEnergie;
 	}
 	
 	public static void simuleLucioleNbPas(double lucioleEnergie,double lucioleDeltaEnergie,int nbPas) {
-		afficheLuciole(lucioleEnergie,true);
 		for(int i = 0;i<nbPas;i++) {
 			lucioleEnergie = incrementeLuciole(lucioleEnergie,lucioleDeltaEnergie);
 			afficheLuciole(lucioleEnergie,true);
@@ -41,24 +40,46 @@ public class LucioleSeule {
 	
 	public static void simuleLucioleNbFlashs(double lucioleEnergie,double lucioleDeltaEnergie) {
 		int nbFlashs = 0;
-		afficheLuciole(lucioleEnergie,true);
 		while(nbFlashs < 3) {
 			lucioleEnergie = incrementeLuciole(lucioleEnergie,lucioleDeltaEnergie);
+			afficheLuciole(lucioleEnergie,true);
 			if(lucioleEnergie > SEUIL) {
 				nbFlashs++;
 			}
-			afficheLuciole(lucioleEnergie,true);
 		}
 	}
 	
 	// Tests
 	public static void main(String[] args) {
+		// Question 1 :
 		//double lucioleEnergie = RandomGen.rGen.nextInt(100);
+		
+		// Question 4 :
+		/*
+		afficheLuciole(lucioleEnergie,true);
+		lucioleEnergie += 30.0;
+		afficheLuciole(lucioleEnergie,true);
+		lucioleEnergie += 70.0;
+		afficheLuciole(lucioleEnergie,true);
+		lucioleEnergie -= 90.0;
+		afficheLuciole(lucioleEnergie,true);
+		*/
+		
+		// Question 5 :
 		//double lucioleDeltaEnergie = RandomGen.rGen.nextDouble();
-		//afficheLuciole(lucioleEnergie,true);
-		//afficheLuciole(150.0,true);
-		//System.out.println(incrementeLuciole(lucioleEnergie,lucioleDeltaEnergie));
+		
+		// Question 7 :
+		/*
+		for(int i = 0;i<10;i++) {
+			lucioleEnergie = incrementeLuciole(lucioleEnergie,lucioleDeltaEnergie);
+			afficheLuciole(lucioleEnergie,true);
+		}
+		*/
+		
+		// Question 8 :
 		//simuleLucioleNbPas(lucioleEnergie,lucioleDeltaEnergie,100);
+		
+		// Question 9 :
 		//simuleLucioleNbFlashs(lucioleEnergie,lucioleDeltaEnergie);
 	}
 
