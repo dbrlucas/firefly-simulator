@@ -51,10 +51,8 @@ public class LucioleSeule {
 	
 	// Tests
 	public static void main(String[] args) {
-		// Question 1 :
 		//double lucioleEnergie = RandomGen.rGen.nextInt(100);
 		
-		// Question 4 :
 		/*
 		afficheLuciole(lucioleEnergie,true);
 		lucioleEnergie += 30.0;
@@ -65,10 +63,8 @@ public class LucioleSeule {
 		afficheLuciole(lucioleEnergie,true);
 		*/
 		
-		// Question 5 :
 		//double lucioleDeltaEnergie = RandomGen.rGen.nextDouble();
 		
-		// Question 7 :
 		/*
 		for(int i = 0;i<10;i++) {
 			lucioleEnergie = incrementeLuciole(lucioleEnergie,lucioleDeltaEnergie);
@@ -76,10 +72,8 @@ public class LucioleSeule {
 		}
 		*/
 		
-		// Question 8 :
 		//simuleLucioleNbPas(lucioleEnergie,lucioleDeltaEnergie,100);
-		
-		// Question 9 :
+
 		//simuleLucioleNbFlashs(lucioleEnergie,lucioleDeltaEnergie);
 	}
 

@@ -27,7 +27,7 @@ public class Prairie {
 			luciole[ENERGIE] = 0.0;
 			return luciole;
 		}
-		luciole[ENERGIE] = luciole[ENERGIE] + luciole[DELTA];
+		luciole[ENERGIE] += luciole[DELTA];
 		return luciole;
 	}
 	
@@ -141,41 +141,43 @@ public class Prairie {
 		GifCreator.construitGIF("simu/prairieGIF.gif", images);
 	}
 	
-	// Fonctions d'affichage qui permettent de vérifier le bon fonctionnement du programme
-	public static void afficheLuciole(double[] luciole) {
-		for(int i = 0;i<luciole.length;i++) {
-			System.out.print(luciole[i]+"   ");
-		}
-		System.out.println();
-	}
-	
-	public static void affichePopulation(double[][] population) {
-	    for(int i = 0;i<population.length;i++) {
-	        for(int j = 0;j<population[i].length;j++) {
-	            System.out.print(population[i][j]+"   ");
-	        }
-	        System.out.println();
-	    }
-	}
-	
 	// Tests
 	public static void main(String[] args) {
-		//double[] luciole  = creerLuciole();
-		//double[][] population = creerPopulation(100);
-		//double[][] population2 = creerPopulation(500);
-		//int[][] prairie3 = prairieVide(5,30);
-		//int[][] prairie4 = {{1,2,-1,3,4,-1,5,6,15,16,-1,19},{7,-1,9,10,11,12,-1,14,17,-1,18,0}};
-		//int [][] prairie1 = prairieLucioles(5,50,population);
-		//int [][] prairie2 = prairieLucioles(200,200,population);
-		//afficheLuciole(luciole);
-		//incrementeLuciole(luciole);
-		//afficheLuciole(luciole);
-		//affichePopulation(population);
-		//affichePrairie(prairie3,population);
-		//affichePrairie(prairie4,population);
-		//affichePrairie(prairie1,population);
-		//simulationPrairie(prairie1,population,20);
-		//simulationPrairieGIF(prairie2,population2,30);
+		/*
+		double[][] population1 = creerPopulation(10);
+		for(int i = 0;i<population1.length;i++) {
+			System.out.print(population1[i]);
+			System.out.println("   "+population1[i][ENERGIE]);
+		}
+		*/
+		
+		/*
+		double[][] population2 = creerPopulation(30);
+		int[][] prairie1 = prairieVide(5,30);
+		affichePrairie(prairie1,population2);
+		int[][] prairie2 = prairieVide(3,100);
+		affichePrairie(prairie2,population2);
+		*/
+
+		/*
+		double[][] population3 = creerPopulation(100);
+		int [][] prairie3 = prairieLucioles(5,50,population3);
+		affichePrairie(prairie3,population3);
+		*/
+		
+		/*
+		double[][] population4 = creerPopulation(100);
+		int [][] prairie4 = prairieLucioles(5,50,population4);
+		simulationPrairie(prairie4,population4,20);
+		int [][] prairie5 = prairieLucioles(3,100,population4);
+		simulationPrairie(prairie5,population4,10);
+		*/
+		
+		/*
+		double[][] population5 = creerPopulation(500);
+		int [][] prairie6 = prairieLucioles(200,200,population5);
+		simulationPrairieGIF(prairie6,population5,30);
+		*/
 	}
 
 }
